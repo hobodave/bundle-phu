@@ -1,11 +1,17 @@
 bundle-phu
 ==========
 
-bundle-phu is a set of [Zend Framework][1] view helpers that automagically concatenate, minify, and gzip
+Bundle-phu is a set of [Zend Framework][1] view helpers that automagically concatenate, minify, and gzip
 your javascript and stylesheets into bundles. This reduces the number of HTTP requests to your servers as
 well as your bandwidth.
 
-bundle-phu is inspired by [bundle-fu][2] a [Ruby on Rails][3] equivalent.
+Bundle-phu is inspired by [bundle-fu][2] a [Ruby on Rails][3] equivalent.
+
+Bundle-phu automatically detects modification to your JS/CSS and will regenerate bundles automatically.
+Minification can be done using either an external program such as the [YUI compressor][4] or using
+PHP via callback.
+
+Compression is done using PHP's [gzencode()][5] function.
 
 ### Before
 
@@ -24,7 +30,7 @@ bundle-phu is inspired by [bundle-fu][2] a [Ruby on Rails][3] equivalent.
     <link type="text/css" src="bundle_3f84da97fc873ca8371a8203fcdd8a82.css?1234567890"></script>
 
 Installation
-------------
+============
 
 1. Place the BundlePhu directory somewhere in your include_path:
 
@@ -71,7 +77,7 @@ This would typically be done inside your Bootstrap.php
     e.g. /public/javascripts -> /../data/cache/js
 
 Usage
------
+=====
 
 As both these helpers extend from the existing HeadScript and HeadLink helpers in [Zend Framework][1],
 you can use them just as you do those.
@@ -79,6 +85,9 @@ you can use them just as you do those.
     <? $this->bundleScript()->offsetSetFile(00, $this->baseUrl('/js/jquery.js')) ?>
     <? $this->bundleScript()->appendFile($this->baseUrl('/js/foo.js')) ?>
 
+
 [1]: http://framework.zend.com/
 [2]: http://code.google.com/p/bundle-fu/
 [3]: http://rubyonrails.org/
+[4]: http://developer.yahoo.com/yui/compressor/
+[5]: http://php.net/gzencode

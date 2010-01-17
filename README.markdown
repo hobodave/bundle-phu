@@ -61,7 +61,7 @@ Installation
                 $view->getHelper('BundleLink')
                     ->setCacheDir(PATH_PROJECT . '/data/cache/css')
                     ->setDocRoot(PATH_PROJECT . '/public')
-                    ->setUrlPrefix('/javascripts');
+                    ->setUrlPrefix('/stylesheets');
 
                 $viewRenderer = Zend_Controller_Action_HelperBroker::getStaticHelper('viewRenderer');
                 $viewRenderer->setView($view);

@@ -42,34 +42,32 @@ Installation
 
 2. Add the BundlePhu view helpers to your view's helper path, and configure the helpers:
 
-This would typically be done inside your Bootstrap.php
-
-    <?php
-    class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
-    {
-        protected function $_initView()
+        <?php
+        class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         {
-            $view = new Zend_View();
-            $view->addHelperPath(
-                PATH_PROJECT . '/library/BundlePhu/View/Helper',
-                'BundlePhu_View_Helper'
-            );
+            protected function $_initView()
+            {
+                $view = new Zend_View();
+                $view->addHelperPath(
+                    PATH_PROJECT . '/library/BundlePhu/View/Helper',
+                    'BundlePhu_View_Helper'
+                );
 
-            $view->getHelper('BundleScript')
-                ->setCacheDir(PATH_PROJECT . '/data/cache/js')
-                ->setDocRoot(PATH_PROJECT . '/public')
-                ->setUrlPrefix('/javascripts');
+                $view->getHelper('BundleScript')
+                    ->setCacheDir(PATH_PROJECT . '/data/cache/js')
+                    ->setDocRoot(PATH_PROJECT . '/public')
+                    ->setUrlPrefix('/javascripts');
 
-            $view->getHelper('BundleLink')
-                ->setCacheDir(PATH_PROJECT . '/data/cache/css')
-                ->setDocRoot(PATH_PROJECT . '/public')
-                ->setUrlPrefix('/javascripts');
+                $view->getHelper('BundleLink')
+                    ->setCacheDir(PATH_PROJECT . '/data/cache/css')
+                    ->setDocRoot(PATH_PROJECT . '/public')
+                    ->setUrlPrefix('/javascripts');
 
-            $viewRenderer = Zend_Controller_Action_HelperBroker::getStaticHelper('viewRenderer');
-            $viewRenderer->setView($view);
-            return $view;
+                $viewRenderer = Zend_Controller_Action_HelperBroker::getStaticHelper('viewRenderer');
+                $viewRenderer->setView($view);
+                return $view;
+            }
         }
-    }
 
 3.  Ensure your CacheDir is writable by the user your web server runs as
 4.  Using either an Alias (apache) or location/alias (nginx) map the UrlPrefix to CacheDir.

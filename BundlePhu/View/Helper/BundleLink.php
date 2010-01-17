@@ -1,6 +1,6 @@
 <?php
 /**
- * Hobo ZF
+ * BundlePhu
  *
  * LICENSE
  *
@@ -8,8 +8,8 @@
  * with this package in the file LICENSE. This license can also be viewed
  * at http://hobodave.com/license.txt
  *
- * @category    Hobo
- * @package     Hobo_View
+ * @category    BundlePhu
+ * @package     BundlePhu_View
  * @subpackage  Helper
  * @author      David Abdemoulaie <dave@hobodave.com>
  * @copyright   Copyright (c) 2010 David Abdemoulaie (http://hobodave.com/)
@@ -19,14 +19,14 @@
 /**
  * Helper for bundling of all included stylesheets into a single file
  *
- * @category    Hobo
- * @package     Hobo_View
+ * @category    BundlePhu
+ * @package     BundlePhu_View
  * @subpackage  Helper
  * @author      David Abdemoulaie <dave@hobodave.com>
  * @copyright   Copyright (c) 2010 David Abdemoulaie (http://hobodave.com/)
  * @license     http://hobodave.com/license.txt New BSD License
  **/
-class Hobo_View_Helper_BundleLink extends Zend_View_Helper_HeadLink
+class BundlePhu_View_Helper_BundleLink extends Zend_View_Helper_HeadLink
 {
     /**
      * local Zend_View reference
@@ -39,7 +39,7 @@ class Hobo_View_Helper_BundleLink extends Zend_View_Helper_HeadLink
      * Registry key for placeholder
      * @var string
      */
-    protected $_regKey = 'Hobo_View_Helper_BundleLink';
+    protected $_regKey = 'BundlePhu_View_Helper_BundleLink';
 
     /**
      * Local reference to $view->baseUrl()
@@ -126,7 +126,7 @@ class Hobo_View_Helper_BundleLink extends Zend_View_Helper_HeadLink
     /**
      * Proxies to Zend_View_Helper_HeadLink::headLink()
      *
-     * @return Hobo_View_Helper_BundleLink
+     * @return BundlePhu_View_Helper_BundleLink
      */
     public function bundleLink()
     {
@@ -139,7 +139,7 @@ class Hobo_View_Helper_BundleLink extends Zend_View_Helper_HeadLink
      * This is where the bundled files are written.
      *
      * @param string $dir
-     * @return Hobo_View_Helper_BundleLink
+     * @return BundlePhu_View_Helper_BundleLink
      */
     public function setCacheDir($dir)
     {
@@ -155,7 +155,7 @@ class Hobo_View_Helper_BundleLink extends Zend_View_Helper_HeadLink
      * if $docRoot == '/var/www/foo' then '/css/foo.css' will be found in '/var/www/foo/css/foo.css'
      *
      * @param string $docRoot
-     * @return Hobo_View_Helper_BundleLink
+     * @return BundlePhu_View_Helper_BundleLink
      */
     public function setDocRoot($docRoot)
     {
@@ -170,7 +170,7 @@ class Hobo_View_Helper_BundleLink extends Zend_View_Helper_HeadLink
      * will be the src for the link tag.
      *
      * @param string $prefix
-     * @return Hobo_View_Helper_BundleLink
+     * @return BundlePhu_View_Helper_BundleLink
      */
     public function setUrlPrefix($prefix)
     {
@@ -186,7 +186,7 @@ class Hobo_View_Helper_BundleLink extends Zend_View_Helper_HeadLink
      * replaced with the generated filename.
      *
      * @param string $command Must contain :filename token
-     * @return Hobo_View_Helper_BundleLink
+     * @return BundlePhu_View_Helper_BundleLink
      */
     public function setMinifyCommand($command)
     {
@@ -202,7 +202,7 @@ class Hobo_View_Helper_BundleLink extends Zend_View_Helper_HeadLink
      * A callback, if defined, will take precedence over a minifyCommand.
      *
      * @param callback $callback
-     * @return Hobo_View_Helper_BundleLink
+     * @return BundlePhu_View_Helper_BundleLink
      **/
     public function setMinifyCallback($callback)
     {
@@ -228,7 +228,7 @@ class Hobo_View_Helper_BundleLink extends Zend_View_Helper_HeadLink
      * gzip_static on;
      *
      * @param bool $bool
-     * @return Hobo_View_Helper_BundleLink
+     * @return BundlePhu_View_Helper_BundleLink
      */
     public function setUseGzip($bool)
     {
@@ -242,7 +242,7 @@ class Hobo_View_Helper_BundleLink extends Zend_View_Helper_HeadLink
      * Minification always occurs before compression.
      *
      * @param bool $bool
-     * @return Hobo_View_Helper_BundleLink
+     * @return BundlePhu_View_Helper_BundleLink
      */
     public function setUseMinify($bool)
     {
@@ -254,7 +254,7 @@ class Hobo_View_Helper_BundleLink extends Zend_View_Helper_HeadLink
      * Sets the level of compression to pass to gzencode()
      *
      * @param int $level
-     * @return Hobo_View_Helper_BundleLink
+     * @return BundlePhu_View_Helper_BundleLink
      **/
     public function setGzipLevel($level)
     {
@@ -266,7 +266,7 @@ class Hobo_View_Helper_BundleLink extends Zend_View_Helper_HeadLink
      * Sets the encoding mode to be passed to gzencode()
      *
      * @param int $encodingMode FORCE_GZIP|FORCE_DEFLATE
-     * @return Hobo_View_Helper_BundleLink
+     * @return BundlePhu_View_Helper_BundleLink
      **/
     public function setGzipEncoding($encodingMode)
     {

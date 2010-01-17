@@ -1,6 +1,6 @@
 <?php
 /**
- * Hobo ZF
+ * BundlePhu
  *
  * LICENSE
  *
@@ -8,8 +8,8 @@
  * with this package in the file LICENSE. This license can also be viewed
  * at http://hobodave.com/license.txt
  * 
- * @category    Hobo
- * @package     Hobo_View
+ * @category    BundlePhu
+ * @package     BundlePhu_View
  * @subpackage  Helper
  * @author      David Abdemoulaie <dave@hobodave.com>
  * @copyright   Copyright (c) 2010 David Abdemoulaie (http://hobodave.com/)
@@ -19,14 +19,14 @@
 /**
  * Helper for bundling of all included javascripts into a single file
  *
- * @category    Hobo
- * @package     Hobo_View
+ * @category    BundlePhu
+ * @package     BundlePhu_View
  * @subpackage  Helper
  * @author      David Abdemoulaie <dave@hobodave.com>
  * @copyright   Copyright (c) 2010 David Abdemoulaie (http://hobodave.com/)
  * @license     http://hobodave.com/license.txt New BSD License
  **/
-class Hobo_View_Helper_BundleScript extends Zend_View_Helper_HeadScript
+class BundlePhu_View_Helper_BundleScript extends Zend_View_Helper_HeadScript
 {
     /**
      * local Zend_View reference
@@ -39,7 +39,7 @@ class Hobo_View_Helper_BundleScript extends Zend_View_Helper_HeadScript
      * Registry key for placeholder
      * @var string
      */
-    protected $_regKey = 'Hobo_View_Helper_BundleScript';
+    protected $_regKey = 'BundlePhu_View_Helper_BundleScript';
 
     /**
      * Local reference to $view->baseUrl()
@@ -128,7 +128,7 @@ class Hobo_View_Helper_BundleScript extends Zend_View_Helper_HeadScript
     /**
      * Proxies to Zend_View_Helper_HeadScript::headScript()
      *
-     * @return Hobo_View_Helper_BundleScript
+     * @return BundlePhu_View_Helper_BundleScript
      */
     public function bundleScript()
     {
@@ -141,7 +141,7 @@ class Hobo_View_Helper_BundleScript extends Zend_View_Helper_HeadScript
      * This is where the bundled files are written.
      *
      * @param string $dir
-     * @return Hobo_View_Helper_BundleScript
+     * @return BundlePhu_View_Helper_BundleScript
      */
     public function setCacheDir($dir)
     {
@@ -157,7 +157,7 @@ class Hobo_View_Helper_BundleScript extends Zend_View_Helper_HeadScript
      * if $docRoot == '/var/www/foo' then '/js/foo.js' will be found in '/var/www/foo/js/foo.js'
      *
      * @param string $docRoot
-     * @return Hobo_View_Helper_BundleScript
+     * @return BundlePhu_View_Helper_BundleScript
      */
     public function setDocRoot($docRoot)
     {
@@ -172,7 +172,7 @@ class Hobo_View_Helper_BundleScript extends Zend_View_Helper_HeadScript
      * will be the src for the script tag.
      *
      * @param string $prefix
-     * @return Hobo_View_Helper_BundleScript
+     * @return BundlePhu_View_Helper_BundleScript
      */
     public function setUrlPrefix($prefix)
     {
@@ -188,7 +188,7 @@ class Hobo_View_Helper_BundleScript extends Zend_View_Helper_HeadScript
      * replaced with the generated filename.
      *
      * @param string $command Must contain :filename token
-     * @return Hobo_View_Helper_BundleScript
+     * @return BundlePhu_View_Helper_BundleScript
      */
     public function setMinifyCommand($command)
     {
@@ -204,7 +204,7 @@ class Hobo_View_Helper_BundleScript extends Zend_View_Helper_HeadScript
      * A callback, if defined, will take precedence over a minifyCommand.
      *
      * @param callback $callback
-     * @return Hobo_View_Helper_BundleScript
+     * @return BundlePhu_View_Helper_BundleScript
      **/
     public function setMinifyCallback($callback)
     {
@@ -230,7 +230,7 @@ class Hobo_View_Helper_BundleScript extends Zend_View_Helper_HeadScript
      * gzip_static on;
      *
      * @param bool $bool
-     * @return Hobo_View_Helper_BundleScript
+     * @return BundlePhu_View_Helper_BundleScript
      */
     public function setUseGzip($bool)
     {
@@ -244,7 +244,7 @@ class Hobo_View_Helper_BundleScript extends Zend_View_Helper_HeadScript
      * Minification always occurs before compression.
      *
      * @param bool $bool
-     * @return Hobo_View_Helper_BundleScript
+     * @return BundlePhu_View_Helper_BundleScript
      */
     public function setUseMinify($bool)
     {
@@ -256,7 +256,7 @@ class Hobo_View_Helper_BundleScript extends Zend_View_Helper_HeadScript
      * Sets the level of compression to pass to gzencode()
      *
      * @param int $level
-     * @return Hobo_View_Helper_BundleScript
+     * @return BundlePhu_View_Helper_BundleScript
      **/
     public function setGzipLevel($level)
     {
@@ -268,7 +268,7 @@ class Hobo_View_Helper_BundleScript extends Zend_View_Helper_HeadScript
      * Sets the encoding mode to be passed to gzencode()
      *
      * @param int $encodingMode FORCE_GZIP|FORCE_DEFLATE
-     * @return Hobo_View_Helper_BundleScript
+     * @return BundlePhu_View_Helper_BundleScript
      **/
     public function setGzipEncoding($encodingMode)
     {

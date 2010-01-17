@@ -34,11 +34,11 @@ Installation
 
 1. Place the BundlePhu directory somewhere in your include_path:
 
-    your_project/
-    |-- application
-    |-- library
-    |   `-- BundlePhu
-    |-- public
+        your_project/
+        |-- application
+        |-- library
+        |   `-- BundlePhu
+        |-- public
 
 2. Add the BundlePhu view helpers to your view's helper path, and configure the helpers:
 
